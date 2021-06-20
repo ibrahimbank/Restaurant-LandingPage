@@ -1,0 +1,48 @@
+#section-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    margin-top: -4rem;
+    padding-bottom: 1rem;
+    color: $text-color;
+  }
+
+  p {
+    text-align: center;
+    line-height: 1.5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    gap: 1rem;
+  }
+
+  img {
+    width: 400px;
+    height: 610px;
+    border-radius: 5px;
+  }
+
+  .middle-image {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 400px;
+      height: 300px;
+      border-radius: 5px;
+    }
+
+    :first-child {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+$primary-color: #272727;
+$secondary-color: rgba(212, 163, 0, 0.705);
+$text-color: white;
+$color-fixed: #3b3b3b;
+$arrow-color: rgb(14, 13, 13);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 50px;
+}
+
+@mixin media-mm {
+  @media screen and (max-width: 920px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (max-width: 1260px) {
+    @content;
+  }
+}

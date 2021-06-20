@@ -1,0 +1,499 @@
+@include media-mm {
+  #section-1 {
+    .section-title {
+      margin-top: 1rem;
+      align-items: center;
+      justify-content: center;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      margin-left: 0;
+
+      p {
+        line-height: 1rem;
+        text-align: center;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  #section-2 {
+    p {
+      text-align: center;
+    }
+
+    .order {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 2rem;
+      width: 100%;
+      height: 100%;
+
+      .detail {
+        align-self: center;
+        margin-bottom: 2rem;
+        width: 50vw;
+        height: 500px;
+
+        .name,
+        .time,
+        .link {
+          height: 50vh;
+        }
+
+        img {
+          width: 60vw;
+          height: 30vh;
+        }
+      }
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .social,
+    .package,
+    .contact {
+      padding-right: 0;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+
+    .logo {
+      margin-bottom: 1rem;
+      padding-right: 0;
+      margin-top: 3rem;
+      margin-left: 1rem;
+    }
+    .input {
+      position: relative;
+      width: 50vw;
+      height: 30px;
+    }
+
+    .subscribe {
+      position: absolute;
+      right: 0.01rem;
+      top: 4.64rem;
+    }
+
+    button:hover {
+      transform: none;
+    }
+  }
+}
+
+@include media-md {
+  p {
+    color: $text-color;
+    font-family: "Poppin";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+
+  .hamburger {
+    position: fixed;
+    top: 1rem;
+    height: 28px;
+    width: 5px;
+    z-index: 10;
+    right: 1rem;
+    cursor: pointer;
+    // background-color: black;
+
+    &__btn {
+      position: absolute;
+      right: 0;
+      top: 0.5rem;
+      width: 28px;
+      height: 3px;
+      background: $text-color;
+      cursor: pointer;
+
+      &::before {
+        //we add more lines with pseudo before elemet(thats how we have three divs in form of menu hambuger)
+        content: "";
+        position: absolute;
+        top: -8px;
+        width: 28px;
+        height: 3px;
+        background: $text-color;
+        cursor: pointer;
+      }
+
+      &::after {
+        // same thing here we add more lines with pseudo before elemet(thats how we have three divs in form of menu hambuger)
+        content: "";
+        position: absolute;
+        top: 8px;
+        width: 28px;
+        height: 3px;
+        background: $text-color;
+        cursor: pointer;
+      }
+
+      &.open {
+        transform: rotate(720deg);
+        background: transparent;
+
+        &::before {
+          transform: rotate(45deg) translate(5px, 8px);
+        }
+
+        &::after {
+          transform: rotate(-45deg) translate(3px, -7px);
+        }
+      }
+    }
+  }
+
+  .nav {
+    position: fixed;
+  }
+
+  .nav_links {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(37, 36, 36, 0.9);
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-right: 2rem;
+    padding-left: 4rem;
+    &.active {
+      top: 0;
+    }
+  }
+  .nav_item {
+    padding-bottom: 0.5rem;
+    padding-left: 4rem;
+    font-size: medium;
+    font-weight: 600;
+  }
+
+  .header .logo {
+    padding-left: 1rem;
+    margin-top: -2rem;
+    z-index: 10;
+  }
+
+  .header p {
+    line-height: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .header button {
+    width: 25%;
+    // height: 60px;
+  }
+  .header h1 {
+    text-align: center;
+  }
+
+  #section-1 {
+    flex-direction: column;
+
+    .sec-1-images {
+      // display: none;
+      order: 1;
+
+      img {
+        display: none;
+      }
+    }
+
+    .section-title {
+      margin-top: 1rem;
+      align-items: center;
+      justify-content: center;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      margin-left: 0;
+
+      p {
+        line-height: 1.5rem;
+        text-align: center;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  #section-2 {
+    p {
+      text-align: center;
+    }
+
+    .order {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 2rem;
+      width: 100%;
+      height: 100%;
+
+      .detail {
+        align-self: center;
+        margin-bottom: 2rem;
+        width: 50vw;
+        height: 500px;
+
+        .name,
+        .time,
+        .link {
+          height: 50vh;
+        }
+
+        img {
+          width: 60vw;
+          height: 30vh;
+        }
+      }
+    }
+  }
+
+  #section-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .dicovery {
+      align-items: center;
+      justify-content: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+
+        br {
+          display: none;
+        }
+      }
+
+      p {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .sectionThree__image {
+      display: none;
+    }
+  }
+
+  #section-4 {
+    .feedback {
+      height: 10rem;
+    }
+
+    .testimony {
+      flex-direction: column;
+      width: 100vw;
+      height: 100%;
+
+      p {
+        text-align: center;
+        line-height: 1rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 1rem;
+      }
+
+      &___img {
+        margin-top: -1rem;
+        margin-left: 12rem;
+        margin-right: 0;
+        order: 1;
+      }
+    }
+
+    .section_header {
+      margin-top: 3rem;
+      text-align: center;
+    }
+  }
+
+  #section-5 {
+    p {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .chef {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 2rem;
+
+      &-img {
+        margin-bottom: 2rem;
+        margin-right: 0;
+      }
+      img {
+        width: 50%;
+        height: 40vh;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  #section-6 {
+    p {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 0.2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(1, 0.5fr);
+      gap: 1rem;
+    }
+
+    img {
+      width: 80vw;
+      height: 610px;
+      border-radius: 5px;
+    }
+
+    .middle-image {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 80vw;
+        height: 300px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .social,
+    .package,
+    .contact {
+      padding-right: 0;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+
+    .logo {
+      margin-bottom: 1rem;
+      padding-right: 0;
+      margin-top: 3rem;
+      margin-left: 1rem;
+    }
+
+    .input {
+      position: relative;
+      width: 80vw;
+      height: 30px;
+      border: none;
+
+      padding-left: 1rem;
+    }
+
+    .subscribe {
+      position: absolute;
+      right: 0;
+      top: 5.4rem;
+      color: black;
+      height: 30px;
+      width: 40vw;
+      background: rgba(255, 164, 46, 0.767);
+      border: none;
+      border-radius: 2px;
+
+      padding-left: 1rem;
+    }
+  }
+}
+
+@include media-lg {
+  #section-1 {
+    .first-part {
+      padding-left: 2rem;
+    }
+
+    .section-title {
+      margin-top: 1rem;
+
+      p {
+        line-height: 1.2rem;
+      }
+    }
+  }
+
+  #section-2 {
+    .order {
+      .detail {
+        height: 55vh;
+      }
+    }
+  }
+
+  #section-6 {
+    img {
+      width: 200px;
+      height: 410px;
+      border-radius: 5px;
+    }
+
+    .middle-image {
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@include media-xl {
+  #section-1 {
+    .section-title {
+      margin-top: 5rem;
+    }
+  }
+  #section-6 {
+    img {
+      width: 200px;
+      height: 410px;
+      border-radius: 5px;
+    }
+
+    .middle-image {
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
